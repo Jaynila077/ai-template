@@ -1,51 +1,83 @@
 # Implementation Specification
 
+> This document defines **how the current task should be implemented**.
+>
+> It is normally produced or updated by the architecture/reasoning agent after inspecting the repository.
+>
+> The implementation agent should treat this document as the primary technical specification, while still verifying all assumptions against the actual codebase.
+
+---
+
 ## Task
 
-<!-- Task name -->
+**Title:**
 
-## Objective
+<!-- Task name from TASK.md -->
+
+**Objective:**
 
 <!-- What this implementation must accomplish -->
 
 ---
 
-## Existing Architecture
+## Current Architecture
 
-<!-- Relevant existing architecture discovered during analysis -->
+<!-- Describe only the existing architecture relevant to this task. -->
+
+### Relevant Components
+
+- **Component:** Purpose
+- **Component:** Purpose
+- **Component:** Purpose
+
+### Current Data Flow
+
+```text
+<!-- Existing flow relevant to this task -->
+```
 
 ---
 
-## Proposed Changes
+## Proposed Architecture
 
-### 1. Backend
+<!-- Explain how the new functionality should fit into the existing system. -->
 
-<!-- Changes required -->
+### Components
 
-### 2. Frontend
+- **Component:** Responsibility
+- **Component:** Responsibility
+- **Component:** Responsibility
 
-<!-- Changes required -->
+### New Data Flow
 
-### 3. Database
+```text
+<!-- Proposed flow -->
+```
 
-<!-- Changes required -->
+---
 
-### 4. AI / ML
+## Implementation Plan
 
-<!-- Changes required -->
+### Step 1 — 
 
-### 5. Infrastructure
+<!-- What should happen -->
 
-<!-- Changes required -->
+### Step 2 —
+
+<!-- What should happen -->
+
+### Step 3 —
+
+<!-- What should happen -->
 
 ---
 
 ## Files To Modify
 
-| File | Changes |
-|------|---------|
-| | |
-| | |
+| File | Changes | Reason |
+|------|---------|--------|
+| `path/to/file` | | |
+| `path/to/file` | | |
 
 ---
 
@@ -53,32 +85,137 @@
 
 | File | Purpose |
 |------|---------|
-| | |
-| | |
+| `path/to/file` | |
+| `path/to/file` | |
 
 ---
 
-## Data Flow
+## Files That Must Not Be Modified
 
-<!-- Explain how data moves through the system -->
+<!-- Important files/components that should remain untouched. -->
 
----
-
-## API Changes
-
-### New Endpoints
-
-<!-- If applicable -->
-
-### Modified Endpoints
-
-<!-- If applicable -->
+- 
+- 
 
 ---
 
-## Important Implementation Details
+## Backend Changes
 
-<!-- Specific decisions Gemini should follow -->
+<!-- Remove this section or mark N/A if not applicable. -->
+
+### API Changes
+
+#### New Endpoints
+
+| Method | Endpoint | Purpose |
+|--------|----------|---------|
+| | | |
+
+#### Modified Endpoints
+
+| Method | Endpoint | Changes |
+|--------|----------|---------|
+| | | |
+
+### Services / Business Logic
+
+<!-- Describe required changes. -->
+
+### Error Handling
+
+<!-- Expected errors and how they should be handled. -->
+
+---
+
+## Frontend Changes
+
+<!-- Remove this section or mark N/A if not applicable. -->
+
+### Components
+
+<!-- Components to create or modify. -->
+
+### State Management
+
+<!-- Required state changes. -->
+
+### User Flow
+
+```text
+<!-- Describe the user interaction flow -->
+```
+
+### UI Requirements
+
+<!-- Important UI/UX requirements. -->
+
+---
+
+## Database Changes
+
+<!-- Remove this section or mark N/A if not applicable. -->
+
+### Schema Changes
+
+<!-- Tables, columns, indexes, relationships, etc. -->
+
+### Migrations
+
+<!-- Required migration changes. -->
+
+### Data Considerations
+
+<!-- Existing data, backwards compatibility, defaults, etc. -->
+
+---
+
+## AI / ML Changes
+
+<!-- Remove this section or mark N/A if not applicable. -->
+
+### Models
+
+<!-- Models involved. -->
+
+### Data Flow
+
+<!-- Input → processing → model → output -->
+
+### Prompt / Agent Changes
+
+<!-- Relevant AI behavior. -->
+
+### Evaluation
+
+<!-- How the AI/ML functionality should be validated. -->
+
+---
+
+## External Services
+
+<!-- APIs, cloud services, third-party systems, etc. -->
+
+| Service | Purpose | Changes |
+|---------|---------|---------|
+| | | |
+
+---
+
+## Security Considerations
+
+<!-- Authentication, authorization, validation, secrets, data exposure, etc. -->
+
+- 
+- 
+
+---
+
+## Performance Considerations
+
+<!-- Relevant performance requirements or potential bottlenecks. -->
+
+- 
+- 
 
 ---
 
@@ -90,28 +227,97 @@
 
 ---
 
-## Testing Strategy
+## Backwards Compatibility
 
-<!-- What should be tested? -->
+<!-- Explain whether existing functionality must continue working and how. -->
 
 ---
 
-## Risks
+## Testing Strategy
 
-- 
-- 
-- 
+### Unit Tests
+
+<!-- What should be tested at unit level? -->
+
+### Integration Tests
+
+<!-- What system interactions should be tested? -->
+
+### End-to-End Tests
+
+<!-- User flows that should be tested, if applicable. -->
+
+### Manual Verification
+
+<!-- Anything that cannot reasonably be automated. -->
 
 ---
 
 ## Acceptance Criteria
 
+The implementation must satisfy all applicable criteria from `TASK.md`.
+
+Additional technical criteria:
+
 - [ ] 
 - [ ] 
 - 
 
 ---
 
-## Implementation Notes
+## Risks & Trade-offs
 
-<!-- Anything Gemini needs to know -->
+### Risks
+
+- 
+- 
+
+### Trade-offs
+
+- 
+- 
+
+### Alternatives Considered
+
+<!-- Only include meaningful alternatives that were actually considered. -->
+
+| Alternative | Reason Not Chosen |
+|-------------|-------------------|
+| | |
+
+---
+
+## Implementation Constraints
+
+The implementation agent MUST:
+
+- Follow the existing architecture unless this specification explicitly changes it.
+- Reuse existing utilities, services, and patterns where appropriate.
+- Avoid unnecessary dependencies.
+- Avoid unrelated refactoring.
+- Preserve existing functionality.
+- Verify assumptions against the actual repository.
+- Follow the project's coding conventions.
+
+The implementation agent MUST NOT:
+
+- Modify unrelated functionality.
+- Introduce a new framework without explicit justification.
+- Rewrite working components unnecessarily.
+- Ignore existing project patterns without a documented reason.
+
+---
+
+## Open Questions
+
+<!-- Questions that must be resolved before or during implementation. -->
+
+- 
+
+---
+
+## Final Implementation Notes
+
+<!-- Filled in after implementation if important discoveries caused deviations from this specification. -->
+
+-
